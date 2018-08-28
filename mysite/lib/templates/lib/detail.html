@@ -16,3 +16,11 @@
  </tr>
 {% endfor %}
 </table>
+
+<form action="{% url 'lib:addBook' %}" method="post" name = "addBook">
+    {% csrf_token %}
+    <p><span>Book Name :</span><input type="text" name="name"></p>
+    <p><span>author :</span><input type="text" name="author"></p>
+    <p><span>Pub-House :</span><input type="text" name="pub_house"></p>
+    <input type="submit" value="Add">
+</form>
